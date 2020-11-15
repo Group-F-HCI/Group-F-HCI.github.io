@@ -1,0 +1,30 @@
+article p {
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+article {
+    margin-left: 20%;
+    margin-right: 20%;
+    border-style: solid;
+    padding: 2%;
+    border-color: #bcd9ea;
+    background-color: white
+}
+
+header{
+    margin-top: 0;
+    text-align: center;
+    background-color: #298fca;
+    color: #bcd9ea;
+}
+
+footer{
+    background-color: #298fca;
+    color: #bcd9ea;
+    padding: 1%;
+}
+
+body{
+    background-color: #094c72;
+}
