@@ -18,7 +18,7 @@ Berikut merupakan beberapa tampilan website yang nanti akan dibuat :
 <img src="images/Show Survey.jpg" height="400" width="426.7"><br><br>
 
 <b>Tempat pengisian survey</b><br>
-<img src="images/Send.jpg" height="400" width="426.7"><br><br>
+<img src="images/Create.jpg" height="400" width="426.7"><br><br>
 
 <h1>Latar Belakang</h1>
 <p>Berdasarkan survey singkat yang pernah kami lakukan, rata-rata orang sering melihat survey yang disebar oleh orang lain. Sebagian dari mereka mengisi survey tersebut dan beberapa diantaranya ada yang mengabaikannya. Selain itu, berdasarkan pengalaman kami, orang-orang cenderung akan mengisi survey jika disebar secara personal dibandingkan di suatu grup. Oleh karena itu, kami ingin membuat suatu website yang bisa menampung survey agar dapat menambah data di survey tersebut agar mencapai target.</p>
