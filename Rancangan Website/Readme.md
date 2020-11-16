@@ -34,7 +34,7 @@ Berikut merupakan beberapa tampilan website yang nanti akan dibuat :
 </ol>
 
 <h1>Bagaimana Cara Kerja Web ini?</h1>
-Cara kerja web ini akan ditampilkan dengan klik <a href="#">LINK INI</a>
+Cara kerja web ini akan ditampilkan dengan klik <a href="images/carakerja01.jpg">LINK INI</a>
 
 <h1>Tentang Kami </h1>
 Kami merupakan mahasiswa dari prodi Ilmu Komputer di Universitas Negeri Jakarta. Kami berasal dari <b>Grup F</b> pada mata kuliah <i>HCI(Human Computer Interaction)</i>. <br>
