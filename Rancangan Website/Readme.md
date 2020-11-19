@@ -1,6 +1,6 @@
 <h1>Suver (Survey Saver)<h1>
 <br>
-<h1>Tentang Suver</h1>
+<h2>Tentang Suver</h2>
 
 <p>Suver merupakan suatu aplikasi berbasis <i>website</i> yang nantinya dapat digunakan untuk menampung form-form yang diberikan oleh <i>user</i>. Form-form yang ditampung berupa <i>link</i> yang telah dibuat terlebih dahulu di website lain seperti <i>google form</i>. Setelah dibuat, <i>link</i> tersebut dapat disimpan di web ini agar nantinya pengguna lain bisa mengisi <i>link</i> tersebut.</p>
 
@@ -20,12 +20,12 @@ Berikut merupakan beberapa tampilan website yang nanti akan dibuat :
 <b>Tempat pengisian survey</b><br>
 <img src="images/Create.jpg" height="400" width="426.7"><br><br>
 
-<h1>Latar Belakang</h1>
+<h2>Latar Belakang</h2>
 <p>Berdasarkan survey singkat yang pernah kami lakukan, rata-rata orang sering melihat survey yang disebar oleh orang lain. Sebagian dari mereka mengisi survey tersebut dan beberapa diantaranya ada yang mengabaikannya. Selain itu, berdasarkan pengalaman kami, orang-orang cenderung akan mengisi survey jika disebar secara personal dibandingkan di suatu grup. Oleh karena itu, kami ingin membuat suatu website yang bisa menampung survey agar dapat menambah data di survey tersebut agar mencapai target.</p>
 
 <p>Berdasarkan hasil survey tersebut, kami menyadari bahwa <i>website</i> ini jarang sekali diketahui oleh orang-orang sehingga kami melihat peluang untuk membuat <i>website</i> ini agar bisa membantu mereka. Kami akan berusaha membuat tampilan <i>website</i> sesimpel mungkin agar pengguna dapat mudah memahaminya.</p>
 
-<h1>Fitur yang akan Tersedia</h1>
+<h2>Fitur yang akan Tersedia</h2>
 <ol>
   <li>Login/Register Akun</li>
   <li>Pemberian SP dan FP</li>
@@ -33,10 +33,16 @@ Berikut merupakan beberapa tampilan website yang nanti akan dibuat :
   <li>Mengetahui identitas singkat pengirim survey</li>
 </ol>
 
-<h1>Bagaimana Cara Kerja Web ini?</h1>
+<h2>Bagaimana Cara Kerja Web ini?</h2>
 Cara kerja web ini akan ditampilkan dengan klik <a href="images/carakerja01.jpg">LINK INI</a>
 
-<h1>Tentang Kami </h1>
+<h2>Laporan</h2>
+https://github.com/Group-F-HCI/Assignment-1/tree/hw3
+
+<h2>Page yang digunakan untuk konferensi</h2>
+https://group-f-hci.github.io/Rancangan%20Website/index.html
+
+<h2>Tentang Kami </h2>
 Kami merupakan mahasiswa dari prodi Ilmu Komputer di Universitas Negeri Jakarta. Kami berasal dari <b>Grup F</b> pada mata kuliah <i>HCI(Human Computer Interaction)</i>. <br>
 Member dari Grup F :
 <ul>
