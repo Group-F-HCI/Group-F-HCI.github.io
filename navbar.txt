@@ -1,4 +1,9 @@
 ===========================
+           ALERT
+===========================
+Sebelum mencopy dibawah ini, alangkah baiknya mencopy bootstrap yg bagian starter template
+
+===========================
            HTML
 ===========================
     <!-- NAVBAR -->
