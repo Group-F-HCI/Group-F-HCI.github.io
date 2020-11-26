@@ -1,0 +1,63 @@
+/* NAVBAR */
+body {
+    background-color: #01B8D7;
+}
+#navbar{
+    background-color: #005B88;
+    color: #96F3FA;
+}
+a:any-link{
+    color: #96F3FA;
+}
+a:hover{
+    background-color: #007285;
+}
+#dropdown{
+    background-color: #007285;
+}
+#surver{
+    height: 5%;
+    width: 10%;
+}
+
+#profile{
+    margin-left: 70%;
+    margin-right: -1;
+}
+
+#PhotoProfile {
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+}
+
+form {
+    background-color: #FFFFFF;
+    color: #5D90A1;
+    margin: 20px 290px 20px 290px;
+    padding: 10px 40px 60px 40px;
+}
+
+label {
+    font-size: 25px;
+}
+    
+#formGroupExampleInput1,
+#exampleFormControlTextarea1 {
+    background-color: #E8E8E8;
+    border-color: white;
+}
+
+#exampleFormControlFile1 {
+    font-size: 15px;
+}
+
+#Buat {
+    background-color: #005A87;
+    color: white;
+    border-radius: 100px;
+    border-color: white;
+    padding: 7px 45px;
+    font-size: 20px;
+    margin-left: 270px;
+}
