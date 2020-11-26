@@ -1,0 +1,63 @@
+/* NAVBAR */
+body {
+    background-color: #96F3FA;
+}
+#navbar{
+    background-color: #005B88;
+    color: #96F3FA;
+}
+a:any-link{
+    color: #96F3FA;
+}
+a:hover{
+    background-color: #007285;
+}
+#dropdown{
+    background-color: #007285;
+}
+#surver{
+    height: 5%;
+    width: 10%;
+}
+
+#profile{
+    margin-left: 70%;
+    margin-right: -1;
+}
+
+#PhotoProfile {
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+}
+
+/* ==================================================== */
+
+
+#AnotherUser{
+    margin-top: 2%;
+    color: #005B88;
+    font-family: Haettenschweiler;
+    font-size: 500%;
+}
+
+article{
+    background-color: #005B88;
+    color: white;
+    padding: 2%;
+    font-size: large;
+    width: 50%;
+    margin-left: 25%;   
+}
+
+#AnotherPhotoProfile{
+    max-height: 70%;
+    max-width: 70%;
+    border-radius: 50%;
+}
+
+
+
+.navbar-brand{
+    color: #96F3FA;
+}
