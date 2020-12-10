@@ -8,45 +8,13 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-	<title>Create</title>
+	<title>SURVER (Survey Saver)</title>
 	<link rel="stylesheet" type="text/css" href="CreateLink.css">
 
 </head>
 <body>
     <!-- NAVBAR -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
-        <img id="surver" class="navbar-brand" href="#" src="Images/Surver.png">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-            <li class="nav-item" style="margin-top: 0.5%;">
-                <a class="nav-link" href="#" style="color: #96F3FA;">Home</a>
-            </li>
-            <li class="nav-item" style="margin-top: 0.5%;">
-                <a class="nav-link" href="#" style="color: #96F3FA;">Create</a>
-            </li>
-            <li class="nav-item" style="margin-top: 0.5%;">
-                <a class="nav-link" href="#" style="color: #96F3FA;">Collections</a>
-            </li>
-            <li id="profile" class="nav-item dropdown">
-                <a style="text-align: right;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img id="PhotoProfile" src="Images/NonPicture.jpeg">
-                    <span style="color: #96F3FA;"> nama user</span>
-                </a>
-
-                <div id="dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="#">Log out</a>
-                </div>
-
-            </li>
-            </ul>
-        </div>
-        
-    </nav>
+    @include('some_include/navbar')
 
     <form id="BuatSurvey">
     	<div id="Isian">
