@@ -1,0 +1,81 @@
+/* NAVBAR */
+body {
+    background-color: #005B88;
+}
+#navbar{
+    background-color: #005B88;
+    color: #96F3FA;
+}
+a:any-link{
+    color: #96F3FA;
+}
+a:hover{
+    background-color: #007285;
+}
+#dropdown{
+    background-color: #007285;
+}
+#surver{
+    height: 5%;
+    width: 10%;
+}
+
+#profile{
+    margin-left: 70%;
+    margin-right: -1;
+}
+
+#PhotoProfile {
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+}
+
+#FotoProfil {
+    width: 30%;
+    border-radius: 50%;
+}
+
+#LayoutKiri {
+    background-color: #5083A0;
+    color: #EDFFFF;
+    padding: 30px 0px 50px 0px;
+    float: left;    
+    width: 25%;
+}
+
+#LayoutKanan {
+    background-color: white;
+    padding: 60px 0px 50px 30px;
+    float: left;
+    height: 100%;
+    width: 75%;
+}
+
+#FotoProfil {
+    height: 200px;
+    width: 200px;
+}
+
+#ProfilUser {
+    margin-left: 80px;
+}
+
+label {
+    color: #01B8D7;
+    font-size: 23px;
+}
+
+#formGroupExampleInput,
+#exampleInputEmail,
+#exampleFormControlTextarea {
+    background-color: #E8E8E8;
+    border-color: white;
+    width: 95%;
+}
+
+#Buat {
+    background-color: #01B8D7;
+    border-radius: 100px;
+    padding: 1px 30px;
+}

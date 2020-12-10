@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #01B8D7;
+}
+
+#navbar {
+    background-color: #005B88;
+    color: #96F3FA;
+}
+
+#surver {
+    height: 5%;
+    width: 10%;
+}
+
+.register {
+	width: 500px;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 60px;  
+        background: white;  
+        border-radius: 16px ;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  display: inline-block;
+  border: none;
+  background: lightgrey;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.registerbtn {
+  background-color: #31a9c4;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a:any-link {
+    color: #96F3FA;
+}
+
+a:hover {
+    background-color: #007285;
+}
+
+.punyaakun {
+	text-align: center;
+}
