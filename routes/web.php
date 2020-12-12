@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('tampilan/HomeAfterLogin');
-});
+Route::get('/', 'App\Http\Controllers\data_controller@index');
+
+route::resource('/surverid_db', 'App\Http\Controllers\data_controller');
