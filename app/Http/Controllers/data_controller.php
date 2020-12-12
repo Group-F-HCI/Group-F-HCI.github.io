@@ -27,7 +27,7 @@ class data_controller extends Controller
 
     public function create()
     {
-        return view('tamplan.Create_Link');
+        return view('tampilan.Create_Link');
     }
 
     /**
@@ -38,7 +38,31 @@ class data_controller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'judul' => 'required', 
+            'link' => 'required',
+            'deskripsi' => 'required'
+        ]);
+        
+        $data = new surverid_db();
+        $data->id = 200;
+        $data->title = $request->input('judul');
+        $data->link = $request->input('pranala');
+        $data->description = $request->input('deskripsi');
+        
+        if($request->hasFile('gambar')){
+            $data->image = '/images/Quote.jpg'; 
+        }
+        else{
+            $data->image = '/images/NonPicture.jpg';
+        }
+
+        $data->username = 'Gupron';
+        $data->fullname = 'Shien Valuneyard';
+        $data->email = 'a@yahoo.com';
+        $data->save();
+
+        return redirect('/')->with('success', 'YOKATTTA');
     }
 
     /**

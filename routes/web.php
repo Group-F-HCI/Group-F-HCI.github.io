@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\data_controller@index');
 
-route::resource('/surverid_db', 'App\Http\Controllers\data_controller');
+// Route::get('/', 'App\Http\Controllers\data_controller@create');
+
+Route::resource('/surverid_db', 'App\Http\Controllers\data_controller');
+
+Route::get('/surverid_db/create' , 'App\Http\Controllers\data_controller@create');
+
+Route::post('/surverid_db/create' , 'App\Http\Controllers\data_controller@store');
