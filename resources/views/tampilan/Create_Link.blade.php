@@ -21,7 +21,7 @@
     <!-- NAVBAR -->
     @include('some_include/navbar')
 
-    <form id="BuatSurvey" action="{{ route('surverid_db.store') }}" method="POST">
+    {{-- <form id="BuatSurvey" action="{{ route('surverid_db.store') }}" method="POST">
         @csrf
     	<div id="Isian">
 
@@ -52,6 +52,23 @@
         <br>
         
         <button type="submit" class="btn btn-primary" id="Buat">CREATE</button>
-    </form>
+    </form> --}}
+    {!! Form::open(['Action' => 'App\Http\Controllers\data_controller@store', 'Method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
+        @csrf    
+        <div class="form-group">
+            {{Form::label('judul', 'Title')}}
+            {{Form::text('judul', '', ['class' => 'form-control'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('pranala', 'Link')}}
+            {{Form::text('pranala', '', ['class' => 'form-control'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('deskripsi', 'Description')}}
+            {{Form::textarea('deskripsi', '', ['class' => 'form-control'])}}
+        </div>
+        {{Form::file('gambar')}}
+        {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+    {!! Form::close() !!}    
 </body>
 </html>

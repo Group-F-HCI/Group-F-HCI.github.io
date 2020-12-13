@@ -40,7 +40,7 @@ class data_controller extends Controller
     {
         $this->validate($request, [
             'judul' => 'required', 
-            'link' => 'required',
+            'pranala' => 'required',
             'deskripsi' => 'required'
         ]);
         
@@ -59,7 +59,7 @@ class data_controller extends Controller
 
         $data->username = 'Gupron';
         $data->fullname = 'Shien Valuneyard';
-        $data->email = 'a@yahoo.com';
+        $data->email = 'b@yahoo.com';
         $data->save();
 
         return redirect('/')->with('success', 'YOKATTTA');
