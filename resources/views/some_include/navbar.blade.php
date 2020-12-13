@@ -14,7 +14,7 @@
                 <a class="nav-link" href="/laravel_project/surverid/public/surverid_db/create" style="color: #96F3FA;">Create</a>
             </li>
             <li class="nav-item" style="margin-top: 0.5%;">
-                <a class="nav-link" href="#" style="color: #96F3FA;">Collections</a>
+                <a class="nav-link" href="/laravel_project/surverid/public/surverid_db/inferno/collection" style="color: #96F3FA;">Collections</a>
             </li>
             <li id="profile" class="nav-item dropdown">
                 <a style="text-align: right;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -20,6 +20,18 @@ class data_controller extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function index_collection()
+    {   
+        $data = surverid_db::all()->where('username','Gupron');
+        return view('tampilan.Collections', compact('data'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -85,7 +97,8 @@ class data_controller extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = surverid_db::find($id);
+        return view('tampilan.Edit_Link', compact('data'));
     }
 
     /**
@@ -97,7 +110,19 @@ class data_controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'judul' => 'required', 
+            'pranala' => 'required',
+            'deskripsi' => 'required'
+        ]);
+        
+        $data = surverid_db::find($id);
+        $data->title = $request->input('judul');
+        $data->link = $request->input('pranala');
+        $data->description = $request->input('deskripsi');
+        $data->save();
+
+        return redirect('/')->with('success', 'YOKATTTA');
     }
 
     /**
@@ -108,6 +133,8 @@ class data_controller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = surverid_db::find($id);
+        $data->delete();
+        return redirect('/')->with('success', 'YOKATTTA');
     }
 }

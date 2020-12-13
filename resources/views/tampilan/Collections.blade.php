@@ -22,23 +22,32 @@
     <div class="container">
         <h2 id="collections" align="center">Collections</h2>
         <article>
-            <div class="row">
-
-                @for ($i = 0; $i < 15; $i++)
-                <div class="col-6 col-lg-4">
-                    <div class="card">
-                        <img src="{{ URL::asset('images/Picture01.jpg') }}" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Survey 404</h5>
-                            <a href="#" class="btn btn-primary">Link menuju survey</a>
-                            <p class="card-text">Description : <br>
-                                Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            @if (count($data)>=1)
+                <div class="row">
+                    @foreach ($data as $item)
+                        <div class="col-6 col-lg-4 mb-2">
+                            <div class="card">
+                                <img src="{{ URL::asset('images/Picture01.jpg') }}" class="card-img-top">
+                                <div class="card-body">
+                                    <a href="/laravel_project/surverid/public/surverid_db/{{$item->id}}/edit">
+                                        <h5 class="card-title" style="color: black;">{{$item->title}}</h5>
+                                    </a> 
+                                    <a href="{{$item->link}}" class="btn btn-primary">Link menuju survey</a>
+                                    <p class="card-text">
+                                        Description : <br>
+                                        {{$item->description}}
+                                    </p>
+                                </div>
+                                {!! Form::open(['method' => 'DELETE', 'class' => 'float-right' ,'action' => ['App\Http\Controllers\data_controller@destroy', $item->id] ])!!}
+                                    {{Form::submit('DELETE', ['class' => 'btn btn-danger'])}}
+                                {!! Form::close() !!}
+                            </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-                @endfor
-
-            </div>
+            @else 
+                <h3>Maaf, tidak ada datah yang bisa ditampikan</h3>
+            @endif
         </article>
 
         <nav aria-label="Page navigation example">

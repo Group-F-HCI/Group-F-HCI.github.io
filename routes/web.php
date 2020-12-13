@@ -23,3 +23,5 @@ Route::resource('/surverid_db', 'App\Http\Controllers\data_controller');
 Route::get('/surverid_db/create' , 'App\Http\Controllers\data_controller@create');
 
 Route::post('/surverid_db/create' , 'App\Http\Controllers\data_controller@store');
+
+Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_controller@index_collection');
