@@ -73,7 +73,8 @@ class data_controller extends Controller
      */
     public function show($id)
     {
-        //
+        $data = surverid_db::find($id);
+        return view('tampilan.survey_check', compact('data'));
     }
 
     /**

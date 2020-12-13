@@ -29,7 +29,7 @@
                         <div class="col-6 col-lg-4 mb-2">
                             <div id="kartu" class="card">
                                 <div class="card-body">
-                                    <a href="#"><h5 id="cardTitle" class="card-title">{{$item->title}}</h5></a>
+                                    <a href="/laravel_project/surverid/public/surverid_db/{{$item->id}}"><h5 id="cardTitle" class="card-title">{{$item->title}}</h5></a>
                                     <h6 class="card-subtitle mb-2 ">{{$item->username}}</h6>
                                     <h6 class="card-subtitle mb-2 ">{{$item->fullname}}</h6>
                                 </div>
