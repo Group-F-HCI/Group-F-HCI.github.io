@@ -20,39 +20,6 @@
 <body>
     <!-- NAVBAR -->
     @include('some_include/navbar')
-
-    {{-- <form id="BuatSurvey" action="{{ route('surverid_db.store') }}" method="POST">
-        @csrf
-    	<div id="Isian">
-
-            <div class="form-group">
-                <label for="formGroupExampleInput">Title</label>
-                <input type="text" class="form-control" id="judul" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Insert Link</label>
-                <input type="text" class="form-control" id="pranala" required>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Description</label>
-                <textarea class="form-control" id="deskripsi" rows="8" required></textarea>
-            </div>
-
-        </div>
-
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Insert Picture</label>
-            <input type="file" class="form-control-file" id="gambar">
-        </div>
-
-        <br>
-        <br>
-        <br>
-        
-        <button type="submit" class="btn btn-primary" id="Buat">CREATE</button>
-    </form> --}}
     {!! Form::open(['Action' => 'App\Http\Controllers\data_controller@store', 'Method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
         @csrf    
         <div class="form-group">
