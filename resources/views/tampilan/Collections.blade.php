@@ -27,20 +27,26 @@
                     @foreach ($data as $item)
                         <div class="col-6 col-lg-4 mb-2">
                             <div class="card">
-                                <img src="{{ URL::asset('images/Picture01.jpg') }}" class="card-img-top">
+                                <img src="/laravel_project/surverid/public/storage/post_images/{{$item->image}}" class="card-img-top">
                                 <div class="card-body">
                                     <a href="/laravel_project/surverid/public/surverid_db/{{$item->id}}/edit">
                                         <h5 class="card-title" style="color: black;">{{$item->title}}</h5>
                                     </a> 
-                                    <a href="{{$item->link}}" class="btn btn-primary">Link menuju survey</a>
                                     <p class="card-text">
                                         Description : <br>
                                         {{$item->description}}
                                     </p>
                                 </div>
-                                {!! Form::open(['method' => 'DELETE', 'class' => 'float-right' ,'action' => ['App\Http\Controllers\data_controller@destroy', $item->id] ])!!}
-                                    {{Form::submit('DELETE', ['class' => 'btn btn-danger'])}}
-                                {!! Form::close() !!}
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a href="{{$item->link}}" class="btn btn-primary">Link</a>
+                                    </div>
+                                    <div class="col-6">
+                                        {!! Form::open(['method' => 'DELETE', 'class' => 'float-right' ,'action' => ['App\Http\Controllers\data_controller@destroy', $item->id] ])!!}
+                                            {{Form::submit('DELETE', ['class' => 'btn btn-danger'])}}
+                                        {!! Form::close() !!}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     @endforeach

@@ -55,7 +55,8 @@ class data_controller extends Controller
         $this->validate($request, [
             'judul' => 'required', 
             'pranala' => 'required',
-            'deskripsi' => 'required'
+            'deskripsi' => 'required',
+            'gambar' => 'image||max:1000'
         ]);
         
         $data = new surverid_db();
@@ -64,15 +65,29 @@ class data_controller extends Controller
         $data->description = $request->input('deskripsi');
         
         if($request->hasFile('gambar')){
-            $data->image = '/images/Quote.jpg'; 
+            //Get Filename with extension
+            $filenamewithext = $request->file('gambar')->getClientOriginalName();
+
+            //Get Filename Without extension
+            $filename = pathinfo($filenamewithext, PATHINFO_FILENAME);
+
+            //Get Just Extension
+            $extension = $request->file('gambar')->getClientOriginalExtension();
+
+            //Filename to store
+            $FilenameToStorage = $filename.'_'.time().'.'.$extension;
+
+            //Upload Image
+            $path = $request->file('gambar')->storeAs('public/post_images', $FilenameToStorage);
         }
         else{
-            $data->image = '/images/NonPicture.jpg';
+            $FilenameToStorage = 'Picture01.jpg';
         }
 
         $data->username = 'Gupron';
         $data->fullname = 'Shien Valuneyard';
         $data->email = 'b@yahoo.com';
+        $data->image = $FilenameToStorage;
         $data->save();
 
         return redirect('/')->with('success', 'YOKATTTA');
@@ -116,11 +131,32 @@ class data_controller extends Controller
             'pranala' => 'required',
             'deskripsi' => 'required'
         ]);
-        
+
+        if($request->hasFile('gambar')){
+            //Get Filename with extension
+            $filenamewithext = $request->file('gambar')->getClientOriginalName();
+
+            //Get Filename Without extension
+            $filename = pathinfo($filenamewithext, PATHINFO_FILENAME);
+
+            //Get Just Extension
+            $extension = $request->file('gambar')->getClientOriginalExtension();
+
+            //Filename to store
+            $FilenameToStorage = $filename.'_'.time().'.'.$extension;
+
+            //Upload Image
+            $path = $request->file('gambar')->storeAs('public/post_images', $FilenameToStorage);
+        }
+
         $data = surverid_db::find($id);
         $data->title = $request->input('judul');
         $data->link = $request->input('pranala');
         $data->description = $request->input('deskripsi');
+        if($request->hasFile('gambar')){
+            Storage::delete('public/storage/image/post_images'.$data->image);
+            $data->image = $FilenameToStorage;
+        }
         $data->save();
 
         return redirect('/')->with('success', 'YOKATTTA');
@@ -135,6 +171,10 @@ class data_controller extends Controller
     public function destroy($id)
     {
         $data = surverid_db::find($id);
+        if($data->image != 'Picture01.jpg'){
+            //Delete Image
+            Storage::delete('public/storage/cover_images/'.$data->cover_images);
+        }
         $data->delete();
         return redirect('/')->with('success', 'YOKATTTA');
     }

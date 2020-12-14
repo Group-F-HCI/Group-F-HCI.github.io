@@ -22,7 +22,9 @@
         </div>
 
         <div class="lay2">
-            <img src="{{asset('images/Picture01.jpg')}}" alt="Picture01.jpg">
+            {{-- <img src="{{asset('images/Picture01.jpg')}}" alt="Picture01.jpg"> --}}
+            <img src="/laravel_project/surverid/public/storage/post_images/{{$data->image}}" alt="Picture01.jpg">
+            
         </div>
 
         <div class="lay3">
