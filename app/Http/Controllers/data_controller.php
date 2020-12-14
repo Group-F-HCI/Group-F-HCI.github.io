@@ -15,7 +15,8 @@ class data_controller extends Controller
      */
     public function index()
     {   
-        $data = surverid_db::all();
+        // $data = surverid_db::all();
+        $data = surverid_db::orderBy('created_at', 'asc')->paginate(15);
         return view('tampilan.HomeAfterLogin', compact('data'));
     }
 
@@ -27,7 +28,8 @@ class data_controller extends Controller
 
     public function index_collection()
     {   
-        $data = surverid_db::all()->where('username','Gupron');
+        // $data = surverid_db::all()->where('username','Gupron');
+        $data = surverid_db::orderBy('created_at', 'asc')->where('username','Gupron')->paginate(15);
         return view('tampilan.Collections', compact('data'));
     }
 
@@ -57,7 +59,6 @@ class data_controller extends Controller
         ]);
         
         $data = new surverid_db();
-        $data->id = 200;
         $data->title = $request->input('judul');
         $data->link = $request->input('pranala');
         $data->description = $request->input('deskripsi');
