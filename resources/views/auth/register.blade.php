@@ -20,24 +20,22 @@
 		<form id="register" method="POST" action="{{ route('register') }}">
 		<div class="register">
 			<label for="fullname"><b>Fullname</b></label>
-	 		<input type="text" id="fullname" name="fullname">
-	 		
-	 		<label for="username"><b>Username</b></label>
-	 		<input type="text" id="username" name="username">
-	 	
-	 		<label for="email"><b>Email</b></label>
-	 		<input type="text" id="email" name="email">
-	 	
-	 		<label for="psw"><b>Password</b></label>
-	 		<input type="password" id="psw" name="psw">
+			<input type="text" id="fullname" name="fullname">
+			
+			<label for="username"><b>Username</b></label>
+			<input type="text" id="username" name="username">
+		
+			<label for="email"><b>Email</b></label>
+			<input type="text" id="email" name="email">
+		
+			<label for="psw"><b>Password</b></label>
+			<input type="password" id="psw" name="psw">
 
-	  	<button type="submit" class="registerbtn">Register</button>
+			<button type="submit" class="registerbtn">Register</button>
 
-	  	<div class="punyaakun">
-	  	<a href="login">Sudah punya akun?</a>
+			<div class="punyaakun">
+				<a href="login">Sudah punya akun?</a>
+			</div>
 		</div>
-	  </div>
-	  	
-	  	
 	</body>
 </html>

@@ -19,7 +19,7 @@
 <body>
     @include('some_include/navbar')
     <div class="container">
-        <img id="quote" height="50%" width="50%" src="images/Quote.jpg">
+        <img id="quote" height="50%" width="50%" src="{{asset('images/Quote.jpg')}}">
         <article>
 
             <h3 id="request" style="color: #005B88;">REQUEST LIST : </h3>

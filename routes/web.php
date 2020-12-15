@@ -15,12 +15,13 @@ use App\Http\Controllers;
 */
 
 
-// Route::get('/', function () {
-//     return view('layouts.app');
-// });
+Route::get('/', function () {
+    return view('tampilan.LandingPage');
+});
 
 // Route::get('/', 'App\Http\Controllers\data_controller@create');
-Route::get('/', 'App\Http\Controllers\data_controller@index');
+
+Route::get('/index', 'App\Http\Controllers\data_controller@index');
 
 Route::resource('/surverid_db', 'App\Http\Controllers\data_controller');
 
@@ -33,3 +34,7 @@ Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_contro
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Login dan Register
+
+Route::post('/register', 'App\Http\Controllers\orlogin_controller@store' );
