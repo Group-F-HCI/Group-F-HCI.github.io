@@ -31,10 +31,14 @@ Route::post('/surverid_db/create' , 'App\Http\Controllers\data_controller@store'
 
 Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_controller@index_collection');
 
+
+
+// Login dan Register
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Login dan Register
+Auth::routes();
 
-Route::post('/register', 'App\Http\Controllers\orlogin_controller@store' );
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

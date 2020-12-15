@@ -15,7 +15,7 @@
 	<!-- NAVBAR -->
     @include('some_include/navbar')
     <div class="container">
-     	<img src="{{asset('images/Quote.jpg')}}" id="picture"> 	
+     	<img src="{{asset('images/Quote.jpg')}}" id="picture" height="500px" width="1000px"> 	
 	</div>
 
     	<footer>
