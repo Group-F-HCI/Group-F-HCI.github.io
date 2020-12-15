@@ -29,7 +29,7 @@ input[type=text], input[type=password] {
   margin: 5px 0 20px 0;
   display: inline-block;
   border: none;
-  background: lightgrey;
+  background: white;
 }
 
 hr {

@@ -28,7 +28,7 @@ input[type=text], input[type=password] {
   margin: 5px 0 20px 0;
   display: inline-block;
   border: none;
-  background: lightgrey;
+  background: white;
 }
 
 hr {
@@ -52,7 +52,7 @@ hr {
 }
 
 a:any-link {
-    color: #96F3FA;
+    color: #31a9c4;
 }
 
 a:hover {

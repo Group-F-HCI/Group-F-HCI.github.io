@@ -8,6 +8,9 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
             <li class="nav-item" style="margin-top: 0.5%;">
+                <a class="nav-link" href="{{ url('/') }}" style="color: #96F3FA;">Home</a>
+            </li>
+            <li class="nav-item" style="margin-top: 0.5%;">
                 <a class="nav-link" href="/laravel_project/surverid/public/login" style="color: #96F3FA;">Login</a>
             </li>
             <li class="nav-item" style="margin-top: 0.5%;">
@@ -38,7 +41,7 @@
             <li id="profile" class="nav-item dropdown">
                 <a style="text-align: right;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img id="PhotoProfile" src="{{ asset('images/NonPicture.jpg') }}">
-                    <span style="color: #96F3FA;"> nama user</span>
+                    <span style="color: #96F3FA;">{{ Auth::user()->name }}</span>
                 </a>
                 <div id="dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="#">Profile</a>

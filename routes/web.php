@@ -19,8 +19,6 @@ Route::get('/', function () {
     return view('tampilan.LandingPage');
 });
 
-// Route::get('/', 'App\Http\Controllers\data_controller@create');
-
 Route::get('/index', 'App\Http\Controllers\data_controller@index');
 
 Route::resource('/surverid_db', 'App\Http\Controllers\data_controller');
@@ -34,10 +32,6 @@ Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_contro
 
 
 // Login dan Register
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
