@@ -1,0 +1,44 @@
+/* NAVBAR */
+body {
+    background-color: #96f3fa;
+}
+#navbar{
+    background-color: #005B88;
+    color: #96F3FA;
+}
+a:any-link{
+    color: #96F3FA;
+}
+a:hover{
+    background-color: #007285;
+}   
+#surver{
+    height: 5%;
+    width: 10%;
+}
+#catatan {
+    margin-top: 25px;
+    font-size: 12px;
+}
+#login {
+    margin-left: 800px;
+    font-size: 27px;
+}
+
+#picture {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 450px;
+    width: 1366px;
+    padding-left: px;
+    padding-right: px;
+}
+
+footer {
+    background-color: #005B88;
+    padding-bottom: 10px;
+}
+
+#foot {
+    color: #94f1fc;
+}
