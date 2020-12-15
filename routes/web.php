@@ -14,9 +14,13 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\data_controller@index');
+
+// Route::get('/', function () {
+//     return view('layouts.app');
+// });
 
 // Route::get('/', 'App\Http\Controllers\data_controller@create');
+Route::get('/', 'App\Http\Controllers\data_controller@index');
 
 Route::resource('/surverid_db', 'App\Http\Controllers\data_controller');
 
@@ -25,3 +29,7 @@ Route::get('/surverid_db/create' , 'App\Http\Controllers\data_controller@create'
 Route::post('/surverid_db/create' , 'App\Http\Controllers\data_controller@store');
 
 Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_controller@index_collection');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

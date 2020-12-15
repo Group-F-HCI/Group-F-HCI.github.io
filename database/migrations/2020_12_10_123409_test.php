@@ -13,10 +13,11 @@ class CreateSurveridDbsTable extends Migration
      */
     public function up()
     {
-        Schema::create('surverid_dbs', function (Blueprint $table) {
+        Schema::table('surverid_dbs', function (Blueprint $table) {
             $table->string('username');           
             $table->string('fullname');
             $table->string('email');
+            $table->string('image');
         });
     }
 
@@ -27,6 +28,11 @@ class CreateSurveridDbsTable extends Migration
      */
     public function down()
     {
-        
+        Schema::table('surverid_dbs', function($table){
+            $table->dropColumn('username');           
+            $table->dropColumn('fullname');
+            $table->dropColumn('email');
+            $table->dropColumn('image');
+        });
     }
 }

@@ -46,7 +46,9 @@
             <a href="{{$data->link}}">
                 <h3 style="margin-left: 470px; background: #96F3FA; color: black;">LINK</h3>
             </a>
-            <h3 style="background-color: #005B88; color: white;">SUBMIT</h3>
+            <a href="/laravel_project/surverid/public/">
+                <h3 style="background-color: #005B88; color: white;">SUBMIT</h3>
+            </a>
         </div>
 
 
