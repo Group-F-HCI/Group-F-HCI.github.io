@@ -23,7 +23,9 @@
 
         <div class="lay2">
             {{-- <img src="{{asset('images/Picture01.jpg')}}" alt="Picture01.jpg"> --}}
-            <img src="/laravel_project/surverid/public/storage/post_images/{{$data->image}}" alt="Picture01.jpg">
+            <a href="/laravel_project/surverid/public/profile/">
+                <img src="/laravel_project/surverid/public/storage/post_images/{{$data->image}}" alt="Picture01.jpg">
+            </a>
             
         </div>
 

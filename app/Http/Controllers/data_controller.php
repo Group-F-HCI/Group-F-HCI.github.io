@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\surverid_db;
+use App\Models\users;
 
 class data_controller extends Controller
 {
@@ -29,7 +30,7 @@ class data_controller extends Controller
     public function index_collection()
     {   
         // $data = surverid_db::all()->where('username','Gupron');
-        $data = surverid_db::orderBy('created_at', 'asc')->where('username','Gupron')->paginate(15);
+        $data = surverid_db::orderBy('created_at', 'asc')->where('username',auth()->user()->name)->paginate(15);
         return view('tampilan.Collections', compact('data'));
     }
 
@@ -84,13 +85,13 @@ class data_controller extends Controller
             $FilenameToStorage = 'Picture01.jpg';
         }
 
-        $data->username = 'Gupron';
-        $data->fullname = 'Shien Valuneyard';
-        $data->email = 'b@yahoo.com';
+        $data->username = auth()->user()->name;
+        $data->fullname = auth()->user()->fullname;
+        $data->email = auth()->user()->email;
         $data->image = $FilenameToStorage;
         $data->save();
 
-        return redirect('/')->with('success', 'YOKATTTA');
+        return redirect('/index')->with('success', 'YOKATTTA');
     }
 
     /**
@@ -159,7 +160,7 @@ class data_controller extends Controller
         }
         $data->save();
 
-        return redirect('/')->with('success', 'YOKATTTA');
+        return redirect('/index')->with('success', 'YOKATTTA');
     }
 
     /**
@@ -176,6 +177,6 @@ class data_controller extends Controller
             Storage::delete('public/storage/cover_images/'.$data->cover_images);
         }
         $data->delete();
-        return redirect('/')->with('success', 'YOKATTTA');
+        return redirect('/index')->with('success', 'YOKATTTA');
     }
 }

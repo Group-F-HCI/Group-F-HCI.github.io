@@ -35,4 +35,7 @@ Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_contro
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+
+//Profile
+Route::resource('/profile', 'App\Http\Controllers\user_controller');
