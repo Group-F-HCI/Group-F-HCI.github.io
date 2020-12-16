@@ -73,9 +73,8 @@ class user_controller extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'judul' => 'required', 
-            'pranala' => 'required',
-            'deskripsi' => 'required'
+            'username' => 'required', 
+            'fullname' => 'required'
         ]);
 
         if($request->hasFile('gambar')){
@@ -92,20 +91,23 @@ class user_controller extends Controller
             $FilenameToStorage = $filename.'_'.time().'.'.$extension;
 
             //Upload Image
-            $path = $request->file('gambar')->storeAs('public/post_images', $FilenameToStorage);
+            $path = $request->file('gambar')->storeAs('public/profile_images', $FilenameToStorage);
         }
 
         $data = User::find($id);
-        $data->title = $request->input('judul');
-        $data->link = $request->input('pranala');
-        $data->description = $request->input('deskripsi');
+        $data->name = $request->input('username');
+        $data->fullname = $request->input('fullname');
+        $data->telegram = $request->input('telegram');
+        $data->occupation = $request->input('occupation');
+        $data->instance = $request->input('instance');
+        $data->about_me = $request->input('aboutme');
         if($request->hasFile('gambar')){
-            Storage::delete('public/storage/image/post_images'.$data->image);
+            Storage::delete('public/storage/image/profile_images'.$data->image);
             $data->image = $FilenameToStorage;
         }
         $data->save();
 
-        return redirect('/index')->with('success', 'YOKATTTA');
+        return redirect('/home')->with('success', 'YOKATTTA');
     }
 
     /**

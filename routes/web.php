@@ -13,13 +13,11 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Route::get('/index', 'App\Http\Controllers\data_controller@index');
 
 Route::get('/', function () {
     return view('tampilan.LandingPage');
 });
-
-Route::get('/index', 'App\Http\Controllers\data_controller@index');
 
 Route::resource('/surverid_db', 'App\Http\Controllers\data_controller');
 
@@ -35,7 +33,7 @@ Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_contro
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+Route::get('/home', 'App\Http\Controllers\HomeController@index');
 
 //Profile
 Route::resource('/profile', 'App\Http\Controllers\user_controller');

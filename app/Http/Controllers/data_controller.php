@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\surverid_db;
-use App\Models\users;
+use App\Models\User;
 
 class data_controller extends Controller
 {
@@ -61,6 +61,7 @@ class data_controller extends Controller
         ]);
         
         $data = new surverid_db();
+        $foruser = user::find(auth()->User()->id);
         $data->title = $request->input('judul');
         $data->link = $request->input('pranala');
         $data->description = $request->input('deskripsi');
@@ -85,11 +86,13 @@ class data_controller extends Controller
             $FilenameToStorage = 'Picture01.jpg';
         }
 
+        $foruser->sp += 1;
         $data->username = auth()->user()->name;
         $data->fullname = auth()->user()->fullname;
         $data->email = auth()->user()->email;
         $data->image = $FilenameToStorage;
         $data->save();
+        $foruser->save();
 
         return redirect('/index')->with('success', 'YOKATTTA');
     }

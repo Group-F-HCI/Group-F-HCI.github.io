@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\surverid_db;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('tampilan/HomeAfterLogin'); 
+        $data = surverid_db::orderBy('created_at', 'asc')->paginate(15);
+        return view('tampilan.HomeAfterLogin', compact('data'));
     }
 }
