@@ -24,7 +24,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 
-    <title>Surverid</title>
+    <title>SURVERID (Survey Saver)</title>
 </head>
 <body>
     @include('some_include.navbar')
@@ -84,17 +84,17 @@
                                         {{ __('Login') }}
                                     </button>
 
-                                    @if (Route::has('password.request'))
+                                    {{-- @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
-                                    @endif
+                                    @endif --}}
                                 </div>
                             </div>
                         </form>
-                        <div class="punyaakun">
+                        {{-- <div class="punyaakun">
                             <a href="register">Belum punya akun?</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

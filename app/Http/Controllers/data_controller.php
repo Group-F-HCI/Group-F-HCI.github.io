@@ -8,7 +8,11 @@ use App\Models\surverid_db;
 use App\Models\User;
 
 class data_controller extends Controller
-{
+{   
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -91,10 +95,11 @@ class data_controller extends Controller
         $data->fullname = auth()->user()->fullname;
         $data->email = auth()->user()->email;
         $data->image = $FilenameToStorage;
+        $data->user_id = auth()->user()->id;
         $data->save();
         $foruser->save();
 
-        return redirect('/index')->with('success', 'YOKATTTA');
+        return redirect('/home')->with('success', 'YOKATTTA');
     }
 
     /**
@@ -106,7 +111,8 @@ class data_controller extends Controller
     public function show($id)
     {
         $data = surverid_db::find($id);
-        return view('tampilan.survey_check', compact('data'));
+        $user = user::find($data->user_id);
+        return view('tampilan.survey_check', compact('data', 'user'));
     }
 
     /**
@@ -163,9 +169,23 @@ class data_controller extends Controller
         }
         $data->save();
 
-        return redirect('/index')->with('success', 'YOKATTTA');
+        return redirect('/home')->with('success', 'YOKATTTA');
     }
 
+    public function update_fp(Request $request)
+    {   
+        $this->validate($request, [
+            'plus' => 'required'
+        ]);
+
+        $data = User::find(auth()->user()->id);
+        $temp = $data->fp;
+
+        $data->fp = $temp + $request->input('plus');
+        $data->save();
+
+        return redirect('/home')->with('success', 'YOKATTTA');
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -180,6 +200,6 @@ class data_controller extends Controller
             Storage::delete('public/storage/cover_images/'.$data->cover_images);
         }
         $data->delete();
-        return redirect('/index')->with('success', 'YOKATTTA');
+        return redirect('/home')->with('success', 'YOKATTTA');
     }
 }

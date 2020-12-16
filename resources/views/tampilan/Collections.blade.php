@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <title>SURVER (Survey Saver)</title>
+    <title>SURVERID (Survey Saver)</title>
 </head>
 <body>
     
@@ -52,7 +52,7 @@
                     @endforeach
                 </div>
             @else 
-                <h3>Maaf, tidak ada datah yang bisa ditampikan</h3>
+                <h5 style="color: white">Maaf, tidak ada data yang bisa ditampilkan</h5>
             @endif
         </article>
 

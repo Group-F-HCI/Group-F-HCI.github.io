@@ -27,6 +27,9 @@ Route::post('/surverid_db/create' , 'App\Http\Controllers\data_controller@store'
 
 Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_controller@index_collection');
 
+Route::get('/surverid_db' , 'App\Http\Controllers\data_controller@update_fp');
+
+Route::post('/surverid_db' , 'App\Http\Controllers\data_controller@update_fp');
 
 
 // Login dan Register

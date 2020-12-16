@@ -7,13 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/ShowProfile.css">
+    <link rel="stylesheet" href="{{ asset('css/ShowProfile.css') }}">
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <title>SURVER (Survey Saver)</title>
+    <title>SURVERID (Survey Saver)</title>
 </head>
 <body>
     
@@ -25,21 +25,19 @@
         <article>
             <div class="row" style="padding-top: 2%;">
                 <div class="col-5">
-                    <img id="AnotherPhotoProfile" src="images/NonPicture.jpg">
+                    <img id="AnotherPhotoProfile" src="/laravel_project/surverid/public/storage/profile_images/{{$data->image}}">
                 </div>
                 <div class="col-7">
-                    Title : SenderX<br>
-                    SP : 15<br>
-                    FP : 15<br>
+                    Title : {{$data->title}}<br>
+                    SP : {{$data->sp}}<br>
+                    FP : {{$data->fp}}<br>
                 </div>
             </div>
-            Name : Safron Aobara <br><br>
-            Telegram : fkkasfjkasjkafj <br><br>
-            Occupation : Unknown <br><br>
+            Name : {{$data->fullname}} <br><br>
+            Telegram : {{$data->telegram}} <br><br>
+            Occupation : {{$data->occupation}} <br><br>
             Description : <br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Unde vero explicabo ducimus illo, consequuntur quidem deserunt, 
-            voluptate iusto rem id maxime possimus ullam eligendi! Error ut ea dolore velit amet? <br>
+            <p>{{$data->about_me}}</p>
         </article>
     </div>
 

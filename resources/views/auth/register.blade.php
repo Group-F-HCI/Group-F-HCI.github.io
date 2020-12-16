@@ -24,7 +24,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
 
-    <title>Surverid</title>
+    <title>SURVERID (Survey Saver)</title>
 </head>
 <body>
     @include('some_include.navbar')
@@ -109,9 +109,9 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="punyaakun">
+                        {{-- <div class="punyaakun">
                             <a href="login">Sudah punya akun?</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

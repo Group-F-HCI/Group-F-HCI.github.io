@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-	<title>SURVER (Survey Saver)</title>
+	<title>SURVERID (Survey Saver)</title>
 
 </head>
 <body>
@@ -23,14 +23,13 @@
 
         <div class="lay2">
             {{-- <img src="{{asset('images/Picture01.jpg')}}" alt="Picture01.jpg"> --}}
-            <a href="/laravel_project/surverid/public/profile/">
-                <img src="/laravel_project/surverid/public/storage/post_images/{{$data->image}}" alt="Picture01.jpg">
-            </a>
-            
+            <img src="/laravel_project/surverid/public/storage/post_images/{{$data->image}}" alt="Picture01.jpg">
         </div>
 
         <div class="lay3">
-            <img src="{{asset('images/NonPicture.jpg')}}" alt="NonPicture.jpg">
+            <a href="/laravel_project/surverid/public/profile/{{$data->user_id}}">
+                <img src="/laravel_project/surverid/public/storage/profile_images/{{$user->image}}" alt="NonPicture.jpg">
+            </a>
             <p style="margin-right: 30px; ">Username :</p>
             <h5 style="padding-right: 640px;">{{$data->username}}</h5>
 
@@ -44,13 +43,16 @@
             <h5 style="width: 59%;">{{$data->description}}</h5>
         </div>
 
-        <div class="lay4">
-            <a href="{{$data->link}}">
+        <div class="lay4 row">
+            <a href="{{$data->link}}" class="col-6" role="button">
                 <h3 style="margin-left: 470px; background: #96F3FA; color: black;">LINK</h3>
             </a>
-            <a href="/laravel_project/surverid/public/">
-                <h3 style="background-color: #005B88; color: white;">SUBMIT</h3>
-            </a>
+            <div class="col-6">
+                {!! Form::open(['method' => 'POST','action' => 'App\Http\Controllers\data_controller@update_fp'])!!} 
+                    {{Form::hidden('plus', 1)}}
+                    {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                {!! Form::close() !!}
+            </div>
         </div>
 
 

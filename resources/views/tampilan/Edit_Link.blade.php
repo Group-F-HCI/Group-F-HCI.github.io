@@ -8,29 +8,35 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-	<title>SURVER (Survey Saver)</title>
+	<title>SURVERID (Survey Saver)</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/EditLink.css') }}">
 
 </head>
 <body>
     <!-- NAVBAR -->
     @include('some_include/navbar')
-    {!! Form::open(['method' => 'PUT', 'action' => ['App\Http\Controllers\data_controller@update', $data->id,  'enctype' => 'multipart/form-data'], 'files' => 'true' ])!!} 
-        @csrf    
-        <div class="form-group">
-            {{Form::label('judul', 'Title')}}
-            {{Form::text('judul', $data->title, ['class' => 'form-control'])}}
+    @if (auth::user()->id == $data->user_id)
+        {!! Form::open(['method' => 'PUT', 'action' => ['App\Http\Controllers\data_controller@update', $data->id,  'enctype' => 'multipart/form-data'], 'files' => 'true' ])!!} 
+            @csrf    
+            <div class="form-group">
+                {{Form::label('judul', 'Title')}}
+                {{Form::text('judul', $data->title, ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group">
+                {{Form::label('pranala', 'Link')}}
+                {{Form::text('pranala', $data->link, ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group">
+                {{Form::label('deskripsi', 'Description')}}
+                {{Form::textarea('deskripsi', $data->description, ['class' => 'form-control'])}}
+            </div>
+            {{Form::file('gambar')}}
+            {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+        {!! Form::close() !!} 
+    @else
+        <div class="container">
+            <h3 style="color: white">Maaf, ini bukan tempat untuk anda</h3>
         </div>
-        <div class="form-group">
-            {{Form::label('pranala', 'Link')}}
-            {{Form::text('pranala', $data->link, ['class' => 'form-control'])}}
-        </div>
-        <div class="form-group">
-            {{Form::label('deskripsi', 'Description')}}
-            {{Form::textarea('deskripsi', $data->description, ['class' => 'form-control'])}}
-        </div>
-        {{Form::file('gambar')}}
-        {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-    {!! Form::close() !!} 
+    @endif
 </body>
 </html>

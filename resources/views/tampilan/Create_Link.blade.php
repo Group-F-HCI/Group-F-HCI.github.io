@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/CreateLink.css') }}">
 
-	<title>SURVER (Survey Saver)</title>
+	<title>SURVERID (Survey Saver)</title>
 </head>
 <body>
     <!-- NAVBAR -->
