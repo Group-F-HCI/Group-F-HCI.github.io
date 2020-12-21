@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\surverid_db;
+use App\Models\logging;
 use App\Models\User;
 
 class data_controller extends Controller
@@ -99,6 +100,13 @@ class data_controller extends Controller
         $data->save();
         $foruser->save();
 
+        $log = new logging();
+        $log->user_id = auth()->user()->id;
+        $log->username = auth()->user()->name;
+        $log->task = "Share a survey link";
+        $log->target_id = 0;
+        $log->save();
+
         return redirect('/home')->with('success', 'YOKATTTA');
     }
 
@@ -167,7 +175,16 @@ class data_controller extends Controller
             Storage::delete('public/storage/image/post_images'.$data->image);
             $data->image = $FilenameToStorage;
         }
+        
+
+        $log = new logging();
+        $log->user_id = auth()->user()->id;
+        $log->username = auth()->user()->name;
+        $log->task = "Edit a survey link";
+        $log->target_id = $data->id;
+
         $data->save();
+        $log->save();
 
         return redirect('/home')->with('success', 'YOKATTTA');
     }
@@ -180,8 +197,8 @@ class data_controller extends Controller
 
         $data = User::find(auth()->user()->id);
         $temp = $data->fp;
-
         $data->fp = $temp + $request->input('plus');
+
         $data->save();
 
         return redirect('/home')->with('success', 'YOKATTTA');
@@ -199,7 +216,16 @@ class data_controller extends Controller
             //Delete Image
             Storage::delete('public/storage/cover_images/'.$data->cover_images);
         }
+
+        $log = new logging();
+        $log->user_id = auth()->user()->id;
+        $log->username = auth()->user()->name;
+        $log->task = "Delete a survey link";
+        $log->target_id = $data->id;
+        $log->save();
+
         $data->delete();
+
         return redirect('/home')->with('success', 'YOKATTTA');
     }
 }

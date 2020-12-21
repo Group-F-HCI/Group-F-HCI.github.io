@@ -39,18 +39,10 @@
 							{{Form::label('username', 'Username')}}
 							{{Form::text('username', $data->name, ['class' => 'form-control'])}}
 						</div>
-						{{-- <div class="form-group">
-							{{Form::label('password', 'Password')}}
-							{{Form::password('password', $data->password, ['class' => 'form-control'])}}
-						</div> --}}
 						<div class="form-group">
 							{{Form::label('fullname', 'Fullname')}}
 							{{Form::text('fullname', $data->fullname, ['class' => 'form-control'])}}
 						</div>
-						{{-- <div class="form-group">
-							{{Form::label('email', 'Email')}}
-							{{Form::email('email', $data->email, ['class' => 'form-control'])}}
-						</div> --}}
 						<div class="form-group">
 							{{Form::label('telegram', 'Telegram')}}
 							{{Form::text('telegram', $data->telegram, ['class' => 'form-control'])}}
@@ -68,8 +60,10 @@
 							{{Form::textarea('aboutme', $data->about_me, ['class' => 'form-control'])}}
 						</div>
 						{{Form::label('gambar', 'Change Profile Picture')}} <br>
-						{{Form::file('gambar')}}
+						{{Form::file('gambar')}} <br> <br> <br> <br>
+						<div class="text-center">
 						{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+						</div>
 					{!! Form::close() !!} 
 				</div>
 			</div>
@@ -79,5 +73,7 @@
             <h3 style="color: white">Maaf, ini bukan tempat untuk anda</h3>
         </div>
 	@endif
+
+
 </body>
 </html>

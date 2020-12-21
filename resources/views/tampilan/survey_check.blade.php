@@ -22,7 +22,6 @@
         </div>
 
         <div class="lay2">
-            {{-- <img src="{{asset('images/Picture01.jpg')}}" alt="Picture01.jpg"> --}}
             <img src="/laravel_project/surverid/public/storage/post_images/{{$data->image}}" alt="Picture01.jpg">
         </div>
 
@@ -41,6 +40,9 @@
 
             <p style="margin-right: 14px;">Description :</p>
             <h5 style="width: 59%;">{{$data->description}}</h5>
+
+            <p style="margin-right: 14px;">Link :</p>
+            <h5 style="width: 59%;">{{$data->link}}</h5>
         </div>
 
         <div class="lay4 row">
@@ -54,7 +56,6 @@
                 {!! Form::close() !!}
             </div>
         </div>
-
 
 </body>
 </html>

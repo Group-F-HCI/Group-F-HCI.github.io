@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
+use App\Models\logging;
 
 class user_controller extends Controller
 {   
@@ -52,6 +53,14 @@ class user_controller extends Controller
     public function show($id)
     {
         $data = User::find($id);
+
+        $log = new logging();
+        $log->user_id = auth()->user()->id;
+        $log->username = auth()->user()->name;
+        $log->task = "See someone profile";
+        $log->target_id = $id;
+        $log->save();
+
         return view('tampilan.Show_Profile', compact('data'));
     }
 
@@ -109,6 +118,14 @@ class user_controller extends Controller
             Storage::delete('public/storage/image/profile_images'.$data->image);
             $data->image = $FilenameToStorage;
         }
+
+        $log = new logging();
+        $log->user_id = auth()->user()->id;
+        $log->username = auth()->user()->name;
+        $log->task = "Edit my profile";
+        $log->target_id = auth()->user()->id;
+        $log->save();
+
         $data->save();
 
         return redirect('/home')->with('success', 'YOKATTTA');

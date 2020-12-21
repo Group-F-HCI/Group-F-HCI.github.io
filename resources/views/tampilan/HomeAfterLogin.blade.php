@@ -48,5 +48,6 @@
         
     </div>
 
+    @include('some_include.footer')
 </body>
 </html>

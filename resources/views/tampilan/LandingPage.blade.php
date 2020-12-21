@@ -15,22 +15,9 @@
 	<!-- NAVBAR -->
     @include('some_include/navbar')
     <div class="container">
-     	<img src="{{asset('images/Quote.jpg')}}" id="picture" height="500px" width="1000px"> 	
+        <img src="{{asset('images/Quote.jpg')}}" id="picture" height="500px" width="1000px"> 	
 	</div>
 
-    	<footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 mr-auto" id="foot">
-                        About Us : <br>
-                        We are wanderer
-                    </div>
-                    <div class="col-6 ml-auto" id="foot">
-                        Contact Us : <br>
-                        WA : 0821********
-                    </div>
-                </div>
-            </div>
-        </footer>
+    @include('some_include.footer')
 </body>
 </html>

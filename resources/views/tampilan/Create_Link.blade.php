@@ -34,8 +34,11 @@
             {{Form::label('deskripsi', 'Description')}}
             {{Form::textarea('deskripsi', '', ['class' => 'form-control'])}}
         </div>
-        {{Form::file('gambar')}}
+        {{Form::file('gambar')}} <br> <br> <br> <br>
+        <div class="text-center">
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-    {!! Form::close() !!}    
+        </div>
+    {!! Form::close() !!}
+
 </body>
 </html>

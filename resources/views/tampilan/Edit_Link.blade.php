@@ -31,12 +31,15 @@
                 {{Form::textarea('deskripsi', $data->description, ['class' => 'form-control'])}}
             </div>
             {{Form::file('gambar')}}
+            <div class="text-center">
             {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+            </div>
         {!! Form::close() !!} 
     @else
         <div class="container">
             <h3 style="color: white">Maaf, ini bukan tempat untuk anda</h3>
         </div>
     @endif
+
 </body>
 </html>
