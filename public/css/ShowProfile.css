@@ -61,3 +61,10 @@ article{
 .navbar-brand{
     color: #96F3FA;
 }
+
+/* FOOTER */
+footer {
+    background-color: #005B88;
+    color: #94f1fc;
+    padding-bottom: 10px;
+}

@@ -31,6 +31,10 @@ Route::get('/surverid_db' , 'App\Http\Controllers\data_controller@update_fp');
 
 Route::post('/surverid_db' , 'App\Http\Controllers\data_controller@update_fp');
 
+Route::get('/form' , 'App\Http\Controllers\form_feedback@create');
+
+Route::post('/form' , 'App\Http\Controllers\form_feedback@store');
+
 
 // Login dan Register
 

@@ -79,3 +79,10 @@ label {
     border-radius: 100px;
     padding: 1px 30px;
 }
+
+/* FOOTER */
+footer {
+    background-color: #005B88;
+    color: #94f1fc;
+    padding-bottom: 10px;
+}

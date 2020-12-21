@@ -13,29 +13,39 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/CreateLink.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/FormFeedback.css') }}">
 
 	<title>SURVERID (Survey Saver)</title>
 </head>
 <body>
     <!-- NAVBAR -->
     @include('some_include/navbar')
-    {!! Form::open(['Action' => 'App\Http\Controllers\data_controller@store', 'Method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
+    <div class="text-center">
+    <h2>Form Feedback</h2>
+    </div>
+    {!! Form::open(['Action' => 'App\Http\Controllers\form_feedback@store', 'Method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
         @csrf    
         <div class="form-group">
-            {{Form::label('judul', 'Title')}}
-            {{Form::text('judul', '', ['class' => 'form-control'])}}
+            {{Form::label('soal1', 'Apakah Anda menyukai tampilan web ini? Jika tidak, bagian mana yang tidak Anda sukai?')}}
+            {{Form::textarea('soal1', '', ['class' => 'form-control'])}}
         </div>
         <div class="form-group">
-            {{Form::label('pranala', 'Link')}}
-            {{Form::text('pranala', '', ['class' => 'form-control'])}}
+            {{Form::label('soal2', 'Fitur apa yang menurut Anda tidak diperlukan pada web ini?')}}
+            {{Form::textarea('soal2', '', ['class' => 'form-control'])}}
         </div>
         <div class="form-group">
-            {{Form::label('deskripsi', 'Description')}}
-            {{Form::textarea('deskripsi', '', ['class' => 'form-control'])}}
+            {{Form::label('soal3', 'Apakah web kami sudah memenuhi standar sebagai web penyedia survey?')}}
+            {{Form::textarea('soal3', '', ['class' => 'form-control'])}}
         </div>
-        {{Form::file('gambar')}} <br> <br> <br> <br>
-        <div class="text-center">
+        <div class="form-group">
+            {{Form::label('soal4', 'Menurut Anda, apakah masih ada hal yang dapat ditingkatkan dari web ini?')}}
+            {{Form::textarea('soal4', '', ['class' => 'form-control'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('soal5', 'Menurut Anda, apakah web ini mudah untuk digunakan? Jika tidak, tolong sebutkan alasannya.')}}
+            {{Form::textarea('soal5', '', ['class' => 'form-control'])}}
+        </div>
+        <div class="text-center"> <br> <br> <br> <br>
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
         </div>
     {!! Form::close() !!}

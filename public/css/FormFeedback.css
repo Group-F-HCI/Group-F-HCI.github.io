@@ -31,6 +31,14 @@ a:hover{
     border-radius: 50%;
 }
 
+/* Menu */
+h2 {
+    margin-top: 2%;
+    color: white;
+    font-family: Haettenschweiler;
+    font-size: 400%;
+}
+
 form {
     background-color: #FFFFFF;
     color: #5D90A1;
@@ -52,23 +60,14 @@ label {
     font-size: 15px;
 }
 
-#Buat,
-#Buat1 {
+#Buat {
+    background-color: #005A87;
     color: white;
     border-radius: 100px;
     border-color: white;
     padding: 7px 45px;
     font-size: 20px;
-}
-
-#Buat {
-    background-color: #005A87;
-    margin-left: 100px;
-}
-
-#Buat1 {
-    background-color: #FF4948;
-    margin-left: 190px;
+    margin-left: 270px;
 }
 
 /* FOOTER */

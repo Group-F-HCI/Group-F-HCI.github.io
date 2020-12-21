@@ -68,8 +68,10 @@
 							{{Form::textarea('aboutme', $data->about_me, ['class' => 'form-control'])}}
 						</div>
 						{{Form::label('gambar', 'Change Profile Picture')}} <br>
-						{{Form::file('gambar')}}
+						{{Form::file('gambar')}} <br> <br> <br> <br>
+						<div class="text-center">
 						{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+						</div>
 					{!! Form::close() !!} 
 				</div>
 			</div>
@@ -79,5 +81,22 @@
             <h3 style="color: white">Maaf, ini bukan tempat untuk anda</h3>
         </div>
 	@endif
+
+	<footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 mr-auto" id="foot">
+                        About Us : <br>
+                        We are wanderer <br> <br>
+                        Link Pengisian Form Feedback : <br>
+                        <a href="/laravel_project/surverid/public/form">Form Feedback</a>
+                    </div>
+                    <div class="col-6 ml-auto" id="foot">
+                        Contact Us : <br>
+                        WA : 0821********
+                    </div>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
