@@ -13,7 +13,6 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/index', 'App\Http\Controllers\data_controller@index');
 
 Route::get('/', function () {
     return view('tampilan.LandingPage');
@@ -31,16 +30,20 @@ Route::get('/surverid_db' , 'App\Http\Controllers\data_controller@update_fp');
 
 Route::post('/surverid_db' , 'App\Http\Controllers\data_controller@update_fp');
 
+//Form
 Route::get('/form' , 'App\Http\Controllers\form_feedback@create');
 
 Route::post('/form' , 'App\Http\Controllers\form_feedback@store');
 
 
 // Login dan Register
-
 Auth::routes();
-
 Route::get('/home', 'App\Http\Controllers\HomeController@index');
 
 //Profile
 Route::resource('/profile', 'App\Http\Controllers\user_controller');
+
+//Rule
+Route::get('/rule', function () {
+    return view('tampilan.Rule');
+});
