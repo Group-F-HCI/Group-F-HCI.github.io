@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = surverid_db::orderBy('created_at', 'asc')->paginate(15);
+        $data = surverid_db::orderBy('created_at', 'desc')->paginate(15);
         return view('tampilan.HomeAfterLogin', compact('data'));
     }
 }

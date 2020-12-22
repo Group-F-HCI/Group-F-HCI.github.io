@@ -97,6 +97,42 @@ class data_controller extends Controller
         $data->email = auth()->user()->email;
         $data->image = $FilenameToStorage;
         $data->user_id = auth()->user()->id;
+
+        if($foruser->fp >= $foruser->sp){
+            if($foruser->fp >= 5){
+                $foruser->title = 'Filler_V';
+            }
+            if($foruser->fp >= 10){
+                $foruser->title = 'Filler_X';
+            }
+            if($foruser->fp >= 25){
+                $foruser->title = 'Filler_XXV';
+            }
+            if($foruser->fp >= 50){
+                $foruser->title = 'Filler_L';
+            }
+            if($foruser->fp >= 100){
+                $foruser->title = 'Filler_C';
+            }
+        }
+        else{
+            if($foruser->sp >= 5){
+                $foruser->title = 'Sender_V';
+            }
+            if($foruser->sp >= 10){
+                $foruser->title = 'Sender_X';
+            }
+            if($foruser->sp >= 25){
+                $foruser->title = 'Sender_XXV';
+            }
+            if($foruser->sp >= 50){
+                $foruser->title = 'Sender_L';
+            }
+            if($foruser->sp >= 100){
+                $foruser->title = 'Sender_C';
+            }
+        }
+
         $data->save();
         $foruser->save();
 
@@ -198,6 +234,41 @@ class data_controller extends Controller
         $data = User::find(auth()->user()->id);
         $temp = $data->fp;
         $data->fp = $temp + $request->input('plus');
+        
+        if($data->fp >= $data->sp){
+            if($data->fp >= 5){
+                $data->title = 'Filler_V';
+            }
+            if($data->fp >= 10){
+                $data->title = 'Filler_X';
+            }
+            if($data->fp >= 25){
+                $data->title = 'Filler_XXV';
+            }
+            if($data->fp >= 50){
+                $data->title = 'Filler_L';
+            }
+            if($data->fp >= 100){
+                $data->title = 'Filler_C';
+            }
+        }
+        else{
+            if($data->sp >= 5){
+                $data->title = 'Sender_V';
+            }
+            if($data->sp >= 10){
+                $data->title = 'Sender_X';
+            }
+            if($data->sp >= 25){
+                $data->title = 'Sender_XXV';
+            }
+            if($data->sp >= 50){
+                $data->title = 'Sender_L';
+            }
+            if($data->sp >= 100){
+                $data->title = 'Sender_C';
+            }
+        }
 
         $data->save();
 
