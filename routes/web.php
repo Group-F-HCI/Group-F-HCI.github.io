@@ -35,6 +35,10 @@ Route::get('/form' , 'App\Http\Controllers\form_feedback@create');
 
 Route::post('/form' , 'App\Http\Controllers\form_feedback@store');
 
+Route::get('/rule', function () {
+    return view('tampilan.Rule');
+});
+
 
 // Login dan Register
 

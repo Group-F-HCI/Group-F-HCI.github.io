@@ -55,7 +55,8 @@
                         About Us : <br>
                         We are wanderer <br> <br>
                         Link Pengisian Form Feedback : <br>
-                        <a href="/laravel_project/surverid/public/form">Form Feedback</a>
+                        <a href="/laravel_project/surverid/public/form">Form Feedback</a> <br> <br>
+                        <a href="/laravel_project/surverid/public/rule">Rules</a>
                     </div>
                     <div class="col-6 ml-auto" id="foot">
                         Contact Us : <br>

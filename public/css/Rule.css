@@ -1,0 +1,62 @@
+/* NAVBAR */
+body {
+    background-color: #01B8D7;
+}
+#navbar{
+    background-color: #005B88;
+    color: #96F3FA;
+}
+a:any-link{
+    color: #96F3FA;
+}
+a:hover{
+    background-color: #007285;
+}
+#dropdown{
+    background-color: #007285;
+}
+#surver{
+    height: 5%;
+    width: 10%;
+}
+
+#profile{
+    margin-left: 70%;
+    margin-right: -1;
+}
+
+#PhotoProfile {
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+}
+
+/* Menu */
+
+form {
+    background-color: #FFFFFF;
+    color: #5D90A1;
+    margin: 20px 290px 20px 290px;
+    padding: 10px 40px 60px 40px;
+}
+
+h2,
+h4 {
+    margin-top: 2%;
+    font-family: Haettenschweiler;
+}
+
+h2 {
+    font-size: 400%;
+}
+
+h4 {
+    font-size: 250%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #005B88;
+    color: #94f1fc;
+    padding-bottom: 10px;
+}
