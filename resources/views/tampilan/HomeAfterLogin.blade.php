@@ -52,7 +52,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6 mr-auto" id="foot">
-                        About Us : <br>
+                        <a href="/laravel_project/surverid/public/about">About Us</a> <br>
                         We are wanderer <br> <br>
                         Link Pengisian Form Feedback : <br>
                         <a href="/laravel_project/surverid/public/form">Form Feedback</a> <br> <br>
@@ -64,6 +64,6 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer>  
 </body>
 </html>

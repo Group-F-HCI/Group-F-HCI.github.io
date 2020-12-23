@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6 mr-auto" id="foot">
-                        About Us : <br>
+                    <a href="/laravel_project/surverid/public/about">About Us</a> <br>
                         We are wanderer
                     </div>
                     <div class="col-6 ml-auto" id="foot">

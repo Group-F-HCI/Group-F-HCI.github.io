@@ -39,6 +39,10 @@ Route::get('/rule', function () {
     return view('tampilan.Rule');
 });
 
+Route::get('/about', function () {
+    return view('tampilan.About_Us');
+});
+
 
 // Login dan Register
 
