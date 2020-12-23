@@ -50,7 +50,7 @@
                 <h3 style="margin-left: 470px; background: #96F3FA; color: black;">LINK</h3>
             </a>
             <div class="col-6">
-                {!! Form::open(['method' => 'POST','action' => 'App\Http\Controllers\data_controller@update_fp'])!!} 
+                {!! Form::open(['method' => 'POST','action' => ['App\Http\Controllers\data_controller@update_fp',$data->id] ])!!} 
                     {{Form::hidden('plus', 1)}}
                     {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                 {!! Form::close() !!}

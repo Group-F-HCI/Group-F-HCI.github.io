@@ -13,8 +13,8 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/Rule.css') }}">
-    <link rel="icon" type="image/png" src="{{asset('images/Picture01.jpg')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/AboutUs.css') }}">
+
 	<title>SURVERID (Survey Saver)</title>
 </head>
 <body>
@@ -23,15 +23,16 @@
     {!! Form::open(['Action' => 'App\Http\Controllers\data_controller@store', 'Method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
         @csrf    
         <div class="text-center">
-        <h2>RULES</h2>
+            <h2>ABOUT US</h2>
         </div>
         <div>
-        <h4>
-        1. Fill the survey according to reality. When finished, please submit. <br>
-        2. Don't ever submit the same survey. <br>
-        3. The survey contents don't contain NSFW. 
-        </h4>
+            <h4>
+            Survey merupakan media yang saat ini sering digunakan dalam mengumpulkan informasi untuk penelitian. <br> <br>
+            Web kami merupakan tempat yang tepat untuk survey-survey tersebut. Kami menyediakan tempat untuk kalian yang membutuhkan orang untuk mengisi survey dan untuk kalian yang berkeinginan membantu orang lain dengan mengisi survey. <br> <br>
+            Kami harap web ini dapat berguna bagi semua orang, khususnya bagi kami sendiri.
+            </h4>
         </div>
     {!! Form::close() !!}
+    @include('some_include.footer')
 </body>
-</html>
+</html> 

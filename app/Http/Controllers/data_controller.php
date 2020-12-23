@@ -35,7 +35,7 @@ class data_controller extends Controller
     public function index_collection()
     {   
         // $data = surverid_db::all()->where('username','Gupron');
-        $data = surverid_db::orderBy('created_at', 'asc')->where('username',auth()->user()->name)->paginate(15);
+        $data = surverid_db::orderBy('created_at', 'asc')->where('user_id',auth()->user()->id)->paginate(15);
         return view('tampilan.Collections', compact('data'));
     }
 
@@ -225,11 +225,13 @@ class data_controller extends Controller
         return redirect('/home')->with('success', 'YOKATTTA');
     }
 
-    public function update_fp(Request $request)
+    public function update_fp(Request $request, $id)
     {   
         $this->validate($request, [
             'plus' => 'required'
         ]);
+        
+        $info = surverid_db::find($id);
 
         $data = User::find(auth()->user()->id);
         $temp = $data->fp;
@@ -269,7 +271,13 @@ class data_controller extends Controller
                 $data->title = 'Sender_C';
             }
         }
+        $log = new logging();
+        $log->user_id = auth()->user()->id;
+        $log->username = auth()->user()->name;
+        $log->task = "Do a survey in someone survey link";
+        $log->target_id = $info->id;
 
+        $log->save();
         $data->save();
 
         return redirect('/home')->with('success', 'YOKATTTA');

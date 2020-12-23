@@ -26,9 +26,9 @@ Route::post('/surverid_db/create' , 'App\Http\Controllers\data_controller@store'
 
 Route::get('/surverid_db/inferno/collection' , 'App\Http\Controllers\data_controller@index_collection');
 
-Route::get('/surverid_db' , 'App\Http\Controllers\data_controller@update_fp');
+Route::get('/surverid_db/{surverid_db} ' , 'App\Http\Controllers\data_controller@update_fp');
 
-Route::post('/surverid_db' , 'App\Http\Controllers\data_controller@update_fp');
+Route::post('/surverid_db/{surverid_db} ' , 'App\Http\Controllers\data_controller@update_fp');
 
 //Form
 Route::get('/form' , 'App\Http\Controllers\form_feedback@create');
@@ -46,4 +46,9 @@ Route::resource('/profile', 'App\Http\Controllers\user_controller');
 //Rule
 Route::get('/rule', function () {
     return view('tampilan.Rule');
+});
+
+//About Us
+Route::get('/about', function () {
+    return view('tampilan.About_Us');
 });

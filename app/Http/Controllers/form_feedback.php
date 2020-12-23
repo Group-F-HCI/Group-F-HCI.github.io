@@ -55,7 +55,7 @@ class form_feedback extends Controller
         $data = new form_feed();
         $foruser = user::find(auth()->User()->id);
 
-        $foruser->sp += 1;
+        $foruser->fp += 1;
         $data->username = auth()->user()->name;
         $data->soal01 = $request->input('soal1');
         $data->soal02 = $request->input('soal2');
