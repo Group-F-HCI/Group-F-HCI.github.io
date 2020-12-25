@@ -20,25 +20,24 @@
 <body>
     <!-- NAVBAR -->
     @include('some_include/navbar')
-    {!! Form::open(['Action' => 'App\Http\Controllers\data_controller@store', 'Method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
-        @csrf    
-        <div class="form-group">
-            {{Form::label('judul', 'Title')}}
-            {{Form::text('judul', '', ['class' => 'form-control'])}}
-        </div>
-        <div class="form-group">
-            {{Form::label('pranala', 'Link')}}
-            {{Form::text('pranala', '', ['class' => 'form-control'])}}
-        </div>
-        <div class="form-group">
-            {{Form::label('deskripsi', 'Description')}}
-            {{Form::textarea('deskripsi', '', ['class' => 'form-control'])}}
-        </div>
-        {{Form::file('gambar')}} <br> <br> <br> <br>
-        <div class="text-center">
-        {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-        </div>
-    {!! Form::close() !!}
-
+        {!! Form::open(['Action' => 'App\Http\Controllers\data_controller@store', 'Method' => 'POST', 'enctype' => 'multipart/form-data'])!!}
+            @csrf    
+            <div class="form-group">
+                {{Form::label('judul', 'Title')}}
+                {{Form::text('judul', '', ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group">
+                {{Form::label('pranala', 'Link')}}
+                {{Form::text('pranala', '', ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group">
+                {{Form::label('deskripsi', 'Description')}}
+                {{Form::textarea('deskripsi', '', ['class' => 'form-control'])}}
+            </div>
+            {{Form::file('gambar')}} <br> <br> <br> <br>
+            <div class="text-center">
+            {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+            </div>
+        {!! Form::close() !!}
 </body>
 </html>

@@ -33,18 +33,29 @@ a:hover{
 
 /* Menu */
 
-form {
-    background-color: #FFFFFF;
-    color: #5D90A1;
-    margin: 20px 290px 20px 290px;
-    padding: 10px 40px 60px 40px;
+@media only screen and (min-width: 1080px){
+    form {
+        background-color: #FFFFFF;
+        color: #5D90A1;
+        margin: 20px 290px 20px 290px;
+        padding: 10px 40px 60px 40px;
+    }
+}
+
+@media only screen and (max-width: 1079px){
+    form {
+        background-color: #FFFFFF;
+        color: #5D90A1;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 label {
     font-size: 25px;
 }
     
-#formGroupExampleInput1,
+/* #formGroupExampleInput1,
 #exampleFormControlTextarea1 {
     background-color: #E8E8E8;
     border-color: white;
@@ -62,7 +73,7 @@ label {
     padding: 7px 45px;
     font-size: 20px;
     margin-left: 270px;
-}
+} */
 
 /* FOOTER */
 footer {

@@ -15,47 +15,56 @@
 
 </head>
 <body>
-    
     @include('some_include/navbar')
-        <div class="lay1">
-            <p>{{$data->title}}</p>
-        </div>
-
-        <div class="lay2">
-            <img src="/laravel_project/surverid/public/storage/post_images/{{$data->image}}" alt="Picture01.jpg">
-        </div>
-
-        <div class="lay3">
-            <a href="/laravel_project/surverid/public/profile/{{$data->user_id}}">
-                <img src="/laravel_project/surverid/public/storage/profile_images/{{$user->image}}" alt="NonPicture.jpg">
-            </a>
-            <p style="margin-right: 30px; ">Username :</p>
-            <h5 style="padding-right: 640px;">{{$data->username}}</h5>
-
-            <p style="margin-right: 37px;">Fullname :</p>
-            <h5 style="padding-right: 570px;">{{$data->fullname}}</h5>
-
-            <p style="margin-right: 66px;">Email :</p>
-            <h5 style="padding-right: 580px;">{{$data->email}}</h5>
-
-            <p style="margin-right: 14px;">Description :</p>
-            <h5 style="width: 59%;">{{$data->description}}</h5>
-
-            <p style="margin-right: 14px;">Link :</p>
-            <h5 style="width: 59%;">{{$data->link}}</h5>
-        </div>
-
-        <div class="lay4 row">
-            <a href="{{$data->link}}" class="col-6" role="button">
-                <h3 style="margin-left: 470px; background: #96F3FA; color: black;">LINK</h3>
-            </a>
-            <div class="col-6">
-                {!! Form::open(['method' => 'POST','action' => ['App\Http\Controllers\data_controller@update_fp',$data->id] ])!!} 
-                    {{Form::hidden('plus', 1)}}
-                    {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-                {!! Form::close() !!}
+        <div class="container mt-5">
+            <p id="title" class="text-center">{{$data->title}}</p>
+            
+            <img id="post_picture" src="/laravel_project/surverid/public/storage/post_images/{{$data->image}}" alt="Picture01.jpg">
+            
+            <div class="row mt-3">
+                <div class="col-lg-3 col-12">
+                    <a href="/laravel_project/surverid/public/profile/{{$data->user_id}}">
+                        <img id="people_picture" src="/laravel_project/surverid/public/storage/profile_images/{{$user->image}}" alt="NonPicture.jpg">
+                    </a>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <div class="row mt-2">
+                        <div class="col-lg-2 text-white">Username :</div>
+                        <div class="col-lg-10" style="background-color: #96F3FA; color: #00a9c7">{{$data->username}}</div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-2 text-white">Fullname :</div>
+                        <div class="col-lg-10" style="background-color: #96F3FA; color: #00a9c7">{{$data->fullname}}</div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-2 text-white">Email :</div>
+                        <div class="col-lg-10" style="background-color: #96F3FA; color: #00a9c7">{{$data->email}}</div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-2 text-white">Description :</div>
+                        <div class="col-lg-10" style="background-color: #96F3FA; color: #00a9c7">{{$data->description}}</div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-lg-2 text-white">Link :</div>
+                        <div class="col-lg-10" style="background-color: #96F3FA; color: #00a9c7">{{$data->link}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-2"></div><div class="col-2"></div>
+                <div class="col-2">
+                    <button class="btn btn-info" onclick="window.location.href='{{$data->link}}';">
+                        Go To Link
+                    </button>
+                </div>
+                <div class="col-2">
+                    {!! Form::open(['method' => 'POST','action' => ['App\Http\Controllers\data_controller@update_fp',$data->id] ])!!} 
+                        {{Form::hidden('plus', 1)}}
+                        {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                    {!! Form::close() !!}
+                </div>
+                <div class="col-2"></div><div class="col-2"></div>
             </div>
         </div>
-
 </body>
 </html>

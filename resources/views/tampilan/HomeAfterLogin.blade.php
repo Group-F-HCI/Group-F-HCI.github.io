@@ -27,7 +27,7 @@
             @if (count($data)>=1)
                 <div class="row">
                     @foreach ($data as $item)
-                        <div class="col-6 col-lg-4 mb-2">
+                        <div class="col-12 col-md-6 col-lg-4 mb-2">
                             <div id="kartu" class="card">
                                 <div class="card-body">
                                     <a href="/laravel_project/surverid/public/surverid_db/{{$item->id}}"><h5 id="cardTitle" class="card-title">{{$item->title}}</h5></a>

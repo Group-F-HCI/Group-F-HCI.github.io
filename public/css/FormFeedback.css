@@ -39,11 +39,22 @@ h2 {
     font-size: 400%;
 }
 
-form {
-    background-color: #FFFFFF;
-    color: #5D90A1;
-    margin: 20px 290px 20px 290px;
-    padding: 10px 40px 60px 40px;
+@media only screen and (min-width: 1080px) {
+    form {
+        background-color: #FFFFFF;
+        color: #5D90A1;
+        margin: 20px 290px 20px 290px;
+        padding: 10px 40px 60px 40px;
+    }
+}
+
+@media only screen and (max-width: 1079px) {
+    form {
+        background-color: #FFFFFF;
+        color: #5D90A1;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 label {

@@ -25,7 +25,7 @@
             @if (count($data)>=1)
                 <div class="row">
                     @foreach ($data as $item)
-                        <div class="col-6 col-lg-4 mb-2">
+                        <div class="col-12 col-md-6 col-lg-4 mb-2">
                             <div class="card">
                                 <img src="/laravel_project/surverid/public/storage/post_images/{{$item->image}}" class="card-img-top">
                                 <div class="card-body">
