@@ -4,9 +4,9 @@
 </p>
 <h1>Submission list :</h1>
 <ol>
-    <li><a href="surverid.xyz">surverid.xyz</a> (Site Deployment Link) </li>
     <li><a href="#">Group Report</a></li>
     <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/tree/dev_repo">Source code<a/></li>
+    <li><a href="surverid.xyz">Site Deployment Link</a></li>
     <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/tree/web_app02">Salah satu branch saat pembuatan</a></li>
 </ol>
 <h1>Tentang Kami</h1>
