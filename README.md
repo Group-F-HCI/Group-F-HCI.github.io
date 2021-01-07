@@ -4,8 +4,9 @@
 </p>
 <h1>Submission list :</h1>
 <ol>
-    <li><a href="#">Group Report</a></li>
-    <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/tree/dev_repo">Source code<a/></li>
+    <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/blob/dev_repo/Laporan%20IMK_Final.pdf">Group Report</a></li>
+    <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/tree/dev_repo">Source code Front End<a/></li>
+    <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/tree/web_app">Source code<a/></li>
     <li><a href="https://surverid.xyz/">Site Deployment Link</a></li>
     <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/tree/web_app02">Salah satu branch saat pembuatan</a></li>
 </ol>
