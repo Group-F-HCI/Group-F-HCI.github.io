@@ -6,7 +6,7 @@
 <ol>
     <li><a href="#">Group Report</a></li>
     <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/tree/dev_repo">Source code<a/></li>
-    <li><a href="http://surverid.xyz/">Site Deployment Link</a></li>
+    <li><a href="https://surverid.xyz/">Site Deployment Link</a></li>
     <li><a href="https://github.com/Group-F-HCI/Group-F-HCI.github.io/tree/web_app02">Salah satu branch saat pembuatan</a></li>
 </ol>
 <h1>Tentang Kami</h1>
